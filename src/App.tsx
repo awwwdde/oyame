@@ -1,11 +1,12 @@
 
 
 function App() {
-
-
   return (
     <>
-      <h1>Hello World</h1>
+      OYAME [MONOCHROME] <br/>
+      AWWWDDE [SALONEE] <br/> 
+      KYOTO COLLECTION [2025 Q2] <br/>
+      自由は心をクリアにする。
     </>
   )
 }
