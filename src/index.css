@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(
+    to top,
+    #000000 0%,
+    #1a1a1a 40%,
+    #E0E2DF 100%
+  );
+  color: white;
+  overflow: hidden;
+}
+
