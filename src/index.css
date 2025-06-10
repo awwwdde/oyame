@@ -15,13 +15,7 @@ html {
 }
 
 body {
-  background: linear-gradient(
-    to top,
-    #000000 0%,
-    #1a1a1a 40%,
-    #E0E2DF 100%
-  );
-  color: white;
+
   overflow: hidden;
 }
 
