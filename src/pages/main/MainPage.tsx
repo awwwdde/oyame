@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import Footbar from '../../ui/footbar';
 import { LinkBar } from '../../ui/linkbar';
 import { AnimatedSphere } from '../../ui/sphere';
+import HeaderBar from '../../ui/headerbar';
 
 const GlassOverlay: React.FC = () => {
   return (
@@ -25,9 +26,14 @@ const MainPage: React.FC = () => {
         <AnimatedSphere />
       </div>
       <GlassOverlay />
-      <div className="relative z-30 min-h-screen flex items-end justify-between p-16 font-mono">
-        <LinkBar />
-        <Footbar />
+      <div className="relative z-30 min-h-screen flex flex-col justify-between">
+        <div className="p-16">
+          <HeaderBar />
+        </div>
+        <div className="flex justify-between p-16 font-mono">
+          <LinkBar />
+          <Footbar />
+        </div>
       </div>
     </div>
   );
