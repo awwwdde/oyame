@@ -6,8 +6,8 @@ interface FootbarProps {
 }
 
 export const Footbar: React.FC<FootbarProps> = () => {
-  const [sunshine, setSunshine] = useState('SUNSHINE');
-  const [language, setLanguage] = useState('RUSSIAN');
+  const [sunshine, setSunshine] = useState('ANIME');
+  const [language, setLanguage] = useState('RUS');
   const [time, setTime] = useState('');
 
   useEffect(() => {
@@ -78,7 +78,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
               animate="animate"
               exit="exit"
               variants={textVariants}
-              onClick={() => setSunshine(sunshine === 'SUNSHINE' ? 'AFTERMOON' : 'SUNSHINE')}
+              onClick={() => setSunshine(sunshine === 'ANIME' ? 'MANGA' : 'ANIME')}
               className="cursor-pointer inline-block"
             >
               {sunshine}
@@ -93,7 +93,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
               animate="animate"
               exit="exit"
               variants={textVariants}
-              onClick={() => setLanguage(language === 'RUSSIAN' ? 'ENGLISH' : 'RUSSIAN')}
+              onClick={() => setLanguage(language === 'RUS' ? 'JPN' : 'RUS')}
               className="cursor-pointer inline-block"
             >
               {language}
