@@ -26,13 +26,44 @@ export const Footbar: React.FC<FootbarProps> = () => {
   }, []);
 
   const textVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 }
+    initial: { 
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)"
+    },
+    exit: { 
+      opacity: 0,
+      scale: 1.2,
+      filter: "blur(10px)",
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    },
+    enter: {
+      opacity: 0,
+      scale: 0.8,
+      filter: "blur(10px)"
+    },
+    animate: { 
+      opacity: 1,
+      scale: 1,
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.4,
+        ease: [0.4, 0, 0.2, 1]
+      }
+    }
   };
 
   const timeVariants = {
-    animate: { opacity: 1 }
+    animate: { 
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        ease: "easeInOut"
+      }
+    }
   };
 
   return (
@@ -40,38 +71,39 @@ export const Footbar: React.FC<FootbarProps> = () => {
       <div className="space-y-4">
         <p className="text-lg font-mono">
           OYAME [
-          <motion.span
-            key={sunshine}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants={textVariants}
-            transition={{ duration: 0.3 }}
-            onClick={() => setSunshine(sunshine === 'SUNSHINE' ? 'AFTERNOON' : 'SUNSHINE')}
-            className="cursor-pointer inline-block"
-          >
-            {sunshine}
-          </motion.span>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={sunshine}
+              initial="enter"
+              animate="animate"
+              exit="exit"
+              variants={textVariants}
+              onClick={() => setSunshine(sunshine === 'SUNSHINE' ? 'AFTERMOON' : 'SUNSHINE')}
+              className="cursor-pointer inline-block"
+            >
+              {sunshine}
+            </motion.span>
+          </AnimatePresence>
           ] <br/>
           AWWWDDE [
-          <motion.span
-            key={language}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants={textVariants}
-            transition={{ duration: 0.3 }}
-            onClick={() => setLanguage(language === 'RUSSIAN' ? 'ENGLISH' : 'RUSSIAN')}
-            className="cursor-pointer inline-block"
-          >
-            {language}
-          </motion.span>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={language}
+              initial="enter"
+              animate="animate"
+              exit="exit"
+              variants={textVariants}
+              onClick={() => setLanguage(language === 'RUSSIAN' ? 'ENGLISH' : 'RUSSIAN')}
+              className="cursor-pointer inline-block"
+            >
+              {language}
+            </motion.span>
+          </AnimatePresence>
           ] <br/>
           ANIME COLLECTION [
           <motion.span
             animate="animate"
             variants={timeVariants}
-            transition={{ duration: 0.1 }}
           >
             {time}
           </motion.span>
