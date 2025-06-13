@@ -1,38 +1,17 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import Footbar from '../../ui/footbar';
-import { LinkBar } from '../../ui/linkbar';
 import { AnimatedSphere } from '../../ui/sphere';
-import HeaderBar from '../../ui/headerbar';
-
-const GlassOverlay: React.FC = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 1 }}
-      className="fixed inset-0 bg-white/10 backdrop-blur-md z-20"
-      style={{
-        background: 'linear-gradient(180deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
-      }}
-    />
-  );
-};
+import { GlassOverlay } from '../../ui/glass';
 
 const MainPage: React.FC = () => {
   return (
-    <div className="min-h-screen relative overflow-hidden">
-      <div className="absolute inset-0 z-10">
-        <AnimatedSphere />
+    <div className="relative min-h-screen overflow-hidden">
+      <div className="absolute inset-0">
+        <AnimatedSphere delay={0.5} />
+        <GlassOverlay />
       </div>
-      <GlassOverlay />
-      <div className="relative z-30 min-h-screen flex flex-col justify-between">
+      <div className="relative z-30 min-h-screen">
         <div className="p-16">
-          <HeaderBar />
-        </div>
-        <div className="flex justify-between p-16 font-mono">
-          <LinkBar />
-          <Footbar />
+          {/* Здесь будет контент главной страницы */}
         </div>
       </div>
     </div>
