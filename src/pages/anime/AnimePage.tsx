@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AboutPage: React.FC = () => {
-  const title = "ABOUT";
+const AnimePage: React.FC = () => {
+  const title = "ANIME";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center">
@@ -36,4 +36,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default AnimePage;
