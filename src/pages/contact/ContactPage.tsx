@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
       <div className="relative font-mono">
         <motion.div
           className="text-7xl font-bold"
@@ -55,7 +55,7 @@ const ContactPage: React.FC = () => {
               key={index}
               className="inline-block"
               animate={{
-                color: char === title[index] ? "#1f2937" : "#6b7280",
+                color: char === title[index] ? "#ffffff" : "#9ca3af",
                 scale: char === title[index] ? 1.1 : 1,
               }}
               transition={{

@@ -12,10 +12,25 @@
 html {
   height: 100vh;
   overflow: hidden;
+  background-color: #2d2d2d;
+  color: white;
 }
 
 body {
-
   overflow: hidden;
+  background-color: #2d2d2d;
+  color: white;
+}
+
+* {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #e5e5e5;
 }
 

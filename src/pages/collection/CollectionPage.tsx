@@ -1,16 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const AnimePage: React.FC = () => {
-  const title = "ANIME";
+const CollectionPage: React.FC = () => {
+  const title = "COLLECTION";
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
       <div className="relative flex space-x-4">
         {title.split("").map((char, index) => (
           <motion.span
             key={index}
-            className="text-7xl font-bold text-gray-800"
+            className="text-7xl font-bold text-white"
             initial={{ 
               opacity: 0,
               y: 20,
@@ -36,4 +36,4 @@ const AnimePage: React.FC = () => {
   );
 };
 
-export default AnimePage;
+export default CollectionPage;

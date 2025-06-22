@@ -6,7 +6,7 @@ interface FootbarProps {
 }
 
 export const Footbar: React.FC<FootbarProps> = () => {
-  const [sunshine, setSunshine] = useState('ANIME');
+  const [sunshine, setSunshine] = useState('PHOTO');
   const [language, setLanguage] = useState('RUS');
   const [time, setTime] = useState('');
 
@@ -67,7 +67,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
   };
 
   return (
-    <footer className='text-black py-4'>
+    <footer className='text-white py-4'>
       <div className="space-y-4">
         <p className="text-lg font-mono">
           OYAME [
@@ -78,7 +78,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
               animate="animate"
               exit="exit"
               variants={textVariants}
-              onClick={() => setSunshine(sunshine === 'ANIME' ? 'MANGA' : 'ANIME')}
+              onClick={() => setSunshine(sunshine === 'PHOTO' ? 'VIDEO' : 'PHOTO')}
               className="cursor-pointer inline-block"
             >
               {sunshine}
@@ -100,7 +100,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
             </motion.span>
           </AnimatePresence>
           ] <br/>
-          ANIME COLLECTION [
+          PHOTO COLLECTION [
           <motion.span
             animate="animate"
             variants={timeVariants}

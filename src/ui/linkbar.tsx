@@ -57,12 +57,12 @@ export const LinkBar: React.FC<LinkBarProps> = ({
   tenchatUrl = 'https://tenchat.ru/awwwdde'
 }) => {
   return (
-    <div className="text-black py-4 flex flex-col">
+    <div className="text-white py-4 flex flex-col">
       <a
         href={githubUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-lg font-mono transition-colors hover:text-gray-600"
+        className="text-lg font-mono transition-colors hover:text-gray-300"
       >
         <MatrixText text="GITHUB" />
       </a>
@@ -70,7 +70,7 @@ export const LinkBar: React.FC<LinkBarProps> = ({
         href={telegramUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-lg font-mono transition-colors hover:text-gray-600"
+        className="text-lg font-mono transition-colors hover:text-gray-300"
       >
         <MatrixText text="TELEGRAM" />
       </a>
@@ -78,7 +78,7 @@ export const LinkBar: React.FC<LinkBarProps> = ({
         href={tenchatUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-lg font-mono transition-colors hover:text-gray-600"
+        className="text-lg font-mono transition-colors hover:text-gray-300"
       >
         <MatrixText text="TENCHAT" />
       </a>

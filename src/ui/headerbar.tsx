@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import AuthButtons from './authbuttons';
+
 
 interface HeaderBarProps {
   className?: string;
@@ -40,10 +40,10 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
   };
 
   return (
-    <header className="text-black py-4">
+    <header className="text-white py-4">
       <div className="flex justify-between items-center">
         <div className="flex space-x-8">
-          <Link to="/" className="text-lg font-mono transition-colors hover:text-gray-600">
+          <Link to="/" className="text-lg font-mono transition-colors hover:text-gray-300">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -56,7 +56,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/about" className="text-lg font-mono transition-colors hover:text-gray-600">
+          <Link to="/about" className="text-lg font-mono transition-colors hover:text-gray-300">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -69,7 +69,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/anime" className="text-lg font-mono transition-colors hover:text-gray-600">
+          <Link to="/collection" className="text-lg font-mono transition-colors hover:text-gray-300">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -78,11 +78,11 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
                 variants={textVariants}
                 className="cursor-pointer inline-block"
               >
-                ANIME
+                COLLECTION
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/contact" className="text-lg font-mono transition-colors hover:text-gray-600">
+          <Link to="/contact" className="text-lg font-mono transition-colors hover:text-gray-300">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -96,7 +96,6 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
             </AnimatePresence>
           </Link>
         </div>
-        <AuthButtons />
       </div>
     </header>
   );
