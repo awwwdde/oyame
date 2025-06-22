@@ -44,14 +44,14 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
   return (
     <>
       <header className="text-white py-10">
-        <div className="container mx-auto px-4">
-          <div className="hidden md:flex justify-center items-center">
+        <div className="container mx-auto px-4 bg-[#FFFFFF] rounded-[15px]">
+          <div className="hidden  md:flex justify-center items-center">
             <div className="flex space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-lg font-mono transition-colors bg-[#FFFFFF] text-[#103840] px-4 py-2 rounded-[15px] w-[100px] h-[30px] flex items-center justify-center"
+                  className="text-lg font-mono transition-colors text-[#103840] px-4 py-2 flex items-center justify-center"
                 >
                   {link.text}
                 </Link>

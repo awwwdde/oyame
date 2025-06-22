@@ -93,7 +93,7 @@ export const Footbar: React.FC<FootbarProps> = () => {
               animate="animate"
               exit="exit"
               variants={textVariants}
-              onClick={() => setLanguage(language === 'RUS' ? 'JPN' : 'RUS')}
+              onClick={() => setLanguage(language === 'RUS' ? 'ENG' : 'RUS')}
               className="cursor-pointer inline-block"
             >
               {language}

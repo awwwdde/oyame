@@ -10,21 +10,16 @@ interface LayoutProps {
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
-      {/* Header */}
       <div className="relative z-50">
         <div className="container mx-auto px-4">
           <HeaderBar />
         </div>
       </div>
-
-      {/* Main Content */}
       <div className="flex-1 flex items-center justify-center relative z-40">
         <div className="container mx-auto px-4">
           {children}
         </div>
       </div>
-
-      {/* Footer */}
       <div className="relative z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end py-4">
