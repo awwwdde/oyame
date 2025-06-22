@@ -42,7 +42,7 @@ const ContactPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
+    <div className="flex flex-col items-center justify-center text-center">
       <div className="relative font-mono">
         <motion.div
           className="text-7xl font-bold"

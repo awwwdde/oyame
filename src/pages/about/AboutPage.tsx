@@ -5,7 +5,7 @@ const AboutPage: React.FC = () => {
   const title = "ABOUT";
 
   return (
-    <div className="min-h-screen bg-gray-800 flex items-center justify-center">
+    <div className="flex flex-col items-center justify-center text-center">
       <div className="relative flex space-x-4">
         {title.split("").map((char, index) => (
           <motion.span

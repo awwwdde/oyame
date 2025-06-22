@@ -40,10 +40,10 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
   };
 
   return (
-    <header className="text-white py-4">
-      <div className="flex justify-between items-center">
+    <header className="text-white py-10">
+      <div className="flex justify-center items-center">
         <div className="flex space-x-8">
-          <Link to="/" className="text-lg font-mono transition-colors hover:text-gray-300">
+          <Link to="/" className="text-lg font-mono transition-colors  bg-[#FFFFFF] text-[#103840] px-4 py-2 rounded-[15px] w-[100px] h-[30px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -52,11 +52,11 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
                 variants={textVariants}
                 className="cursor-pointer inline-block"
               >
-                HOME
+                home
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/about" className="text-lg font-mono transition-colors hover:text-gray-300">
+          <Link to="/about" className="text-lg font-mono transition-colors bg-[#FFFFFF] text-[#103840] px-4 py-2 rounded-[15px] w-[100px] h-[30px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -65,11 +65,11 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
                 variants={textVariants}
                 className="cursor-pointer inline-block"
               >
-                ABOUT
+                about
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/collection" className="text-lg font-mono transition-colors hover:text-gray-300">
+          <Link to="/collection" className="text-lg font-mono transition-colors bg-[#FFFFFF] text-[#103840] px-4 py-2 rounded-[15px] w-[100px] h-[30px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -78,11 +78,11 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
                 variants={textVariants}
                 className="cursor-pointer inline-block"
               >
-                COLLECTION
+                collection
               </motion.span>
             </AnimatePresence>
           </Link>
-          <Link to="/contact" className="text-lg font-mono transition-colors hover:text-gray-300">
+          <Link to="/contact" className="text-lg font-mono transition-colors bg-[#FFFFFF] text-[#103840] px-4 py-2 rounded-[15px] w-[100px] h-[30px] flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.span
                 initial="enter"
@@ -91,7 +91,7 @@ export const HeaderBar: React.FC<HeaderBarProps> = () => {
                 variants={textVariants}
                 className="cursor-pointer inline-block"
               >
-                CONTACT
+                contact
               </motion.span>
             </AnimatePresence>
           </Link>

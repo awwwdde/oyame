@@ -5,32 +5,22 @@
 :root {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
 }
 
-html {
-  height: 100vh;
-  overflow: hidden;
-  background-color: #2d2d2d;
-  color: white;
+html, body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
 }
 
 body {
-  overflow: hidden;
-  background-color: #2d2d2d;
-  color: white;
+  background-image: url('./addons/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: transparent; /* fallback color */
 }
 
-* {
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-a:hover {
-  color: #e5e5e5;
-}
 

@@ -9,28 +9,29 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="min-h-screen flex flex-col relative bg-gray-800">
-      <div className="absolute inset-0 z-0">
-        {children}
-      </div>
+    <div className="h-screen flex flex-col overflow-hidden">
+      {/* Header */}
       <div className="relative z-50">
         <div className="container mx-auto px-4">
           <HeaderBar />
         </div>
       </div>
 
-      <div className="flex-1 relative z-40">
+      {/* Main Content */}
+      <div className="flex-1 flex items-center justify-center relative z-40">
         <div className="container mx-auto px-4">
+          {children}
         </div>
       </div>
 
-      <div className="relative z-50 mt-auto">
+      {/* Footer */}
+      <div className="relative z-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-end py-4">
-            <div className="">
+            <div>
               <LinkBar />
             </div>
-            <div className="text-right">
+            <div>
               <Footbar />
             </div>
           </div>
